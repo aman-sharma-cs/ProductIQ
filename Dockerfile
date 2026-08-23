@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN chmod +x gradlew
 RUN ./gradlew clean bootJar --no-daemon
 
 CMD ["java", "-jar", "build/libs/productiq-0.0.1-SNAPSHOT.jar"]
